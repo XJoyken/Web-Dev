@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="github-white-icon.png">
+  <title>Pricing · Plans for every developer</title>
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+          background: #fff;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      #container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      header {
+          display: flex;
+      }
+      #header_left {
+          display: flex;
+      }
+      #header_right {
+          flex:1;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+      }
+      #github_logo_img {
+          margin: 19px 32px;
+          width: 32px;
+          cursor: pointer;
+      }
+      #header_list > ul {
+          display: flex;
+          list-style: none;
+          gap: 36px;
+          margin-top: 26px;
+          margin-left: -48px;
+      }
+      #header_list a {
+          text-decoration: none;
+          color: #000;
+      }
+      #header_list a:hover {
+          color: #737373;
+      }
+      #search_button_field {
+          margin: 16px 0;
+      }
+      #search_button {
+          display: flex;
+          align-items: end;
+          padding: 6px 164px 6px 5px;
+          font-size: 14px;
+          gap: 5px;
+          background: #fff;
+          margin-right: 10px;
+          border: 1px solid #c7c7c7;
+          border-radius: 6px;
+          color: #737373;
+          cursor: pointer;
+      }
+      #search_button:hover {
+          background: #fff;
+      }
+      #search_icon {
+          width: 18px;
+          transform: rotate(-12deg);
+      }
+      #vertical_line {
+          border-right: 1px solid #c7c7c7;
+          height: 20px;
+          margin-left: 2px;
+          margin-right: 12px;
+      }
+      #dashboard_button_field {
+          margin-right: 30px;
+      }
+      #dashboard_button {
+          display: flex;
+          align-items: end;
+          padding: 6px 13px;
+          color: #000;
+          background: #fff;
+          border: 1px solid #c7c7c7;
+          border-radius: 6px;
+          font-size: 14px;
+          cursor: pointer;
+      }
+      #dash_field {
+          position: absolute;
+          width: 17px;
+          height: 17px;
+          top: 28px;
+          right: 155px;
+          display: flex;
+          justify-content: center;
+          border: 1px solid #c7c7c7;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      #dash {
+          margin-top: 3px;
+          height: 10px;
+          border-right: 1px solid #c7c7c7;
+          transform: rotate(20deg);
+      }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="header_left">
+        <div id="github_logo">
+          <img id="github_logo_img" src="github-icon.png" alt="GitHub Logo">
+        </div>
+        <div id="header_list">
+          <ul>
+            <li><a href="">Platform</a></li>
+            <li><a href="">Solutions</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Open Source</a></li>
+            <li><a href="">Enterprise</a></li>
+            <li><a href="">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="header_right">
+        <div id="search_button_field">
+          <button id="search_button" type="button">
+            <img id="search_icon" src="loupe.png" alt="Search Icon">
+            Search or jump to...
+          </button>
+          <div id="dash_field">
+            <div id="dash"></div>
+          </div>
+        </div>
+        <div id="vertical_line"></div>
+        <div id="dashboard_button_field">
+          <button id="dashboard_button" type="button">Dashboard</button>
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

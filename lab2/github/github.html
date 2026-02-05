@@ -394,6 +394,91 @@
       #enterprise_list {
           margin-top: 14px;
       }
+      footer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0;
+      }
+      #footer_text h1 {
+          font-size: 68px;
+          color: #1f2328;
+          letter-spacing: -4px;
+          margin: 0;
+      }
+      #addons_field {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      .addons_containers {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          margin-top: 36px;
+      }
+      .addon_container {
+          width: 390px;
+          height: 260px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
+          position: relative;
+          cursor: pointer;
+      }
+      .addon_container:hover {
+          width: 410px;
+          height: 280px;
+      }
+      .addon_container h4 {
+          font-size: 22px;
+          padding: 0 30px;
+          font-weight: 600;
+          margin-top: 90px;
+      }
+      .addon_container h5 {
+          font-size: 17px;
+          padding: 0 30px;
+          font-weight: 600;
+          margin-top: 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      .addon_container p {
+          position: relative;
+          color: rgb(89, 99, 110);
+          padding: 0 30px;
+          font-size: 17px;
+          margin-top: -15px;
+      }
+      .addon_container .icons {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+      }
+      .footer_arrow {
+          width: 20px;
+          height: 20px;
+          transform: rotate(270deg);
+          margin-top: 7px;
+          margin-left: -4px;
+      }
+      #new {
+          border: 1px solid green;
+          width: 40px;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+          position: absolute;
+          color: green;
+          padding-top: -1px;
+          left: 315px;
+          top: 45px;
+          font-size: 12px;
+      }
   </style>
 </head>
 <body>
@@ -571,6 +656,69 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div id="footer_text">
+        <h1>Additional add-ons</h1>
+      </div>
+      <div id="addons_field">
+        <div class="addons_containers">
+          <div class="addon_container">
+            <img class="icons" style="width: 46px;" src="github_copilot_icon.png" alt="github copilot icon">
+            <h4>GitHub Copilot</h4>
+            <p>
+              Get started for free with up to 2,000 completions and 50 chat requests per month.
+            </p>
+            <h5>Compare plans<img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+          </div>
+          <div class="addon_container">
+            <img class="icons" style="width: 46px" src="github_models_icon.png" alt="github models icon">
+            <div id="new">
+              New
+            </div>
+            <h4>GitHub Models</h4>
+            <p>
+              Bring industry-leading AI into your workflow, securely, scalably, and with full developer control.
+            </p>
+            <h5>Learn more<img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+          </div>
+          <div class="addon_container">
+            <img class="icons" style="width: 46px" src="github_security_icon.png" alt="github security icon">
+            <h4>GitHub Advanced Security</h4>
+            <p>
+              Gain peace of mind with our security, privacy, and responsible AI policies.
+            </p>
+            <h5>Learn more<img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+          </div>
+        </div>
+        <div class="addons_containers">
+          <div class="addon_container">
+            <img class="icons" style="width: 50px" src="github_codes_icon.png" alt="github codespaces icon">
+            <h4>GitHub Codespaces</h4>
+            <p>
+              Starting at $0.18 per hour of compute and $0.07 per GB of storage.
+            </p>
+            <h5>Learn more<img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+          </div>
+          <div class="addon_container">
+            <img class="icons" style="width: 46px" src="github_support_icon.png" alt="github support icon">
+            <h4>Premium support</h4>
+            <p>
+              Get expert help for Enterprise Cloud and Enterprise—any hour your team needs it.
+            </p>
+            <h5>Learn more<img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+          </div>
+          <div class="addon_container">
+            <img class="icons" style="width: 46px" src="github_storage_icon.png" alt="github storage icon">
+            <h4>Git Large File Storage</h4>
+            <p>
+              $5 per month for 50 GB bandwidth and 50 GB of storage.
+            </p>
+            <h5>Learn more <img class="footer_arrow" src="arrow.png" alt="arrow"></h5>
+
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

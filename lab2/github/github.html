@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="github-white-icon.png">
+  <title>Pricing · Plans for every developer</title>
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+          background: #fff;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      #container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      header {
+          display: flex;
+      }
+      #header_left {
+          display: flex;
+      }
+      #header_right {
+          flex:1;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+      }
+      #github_logo_img {
+          margin: 19px 32px;
+          width: 32px;
+          cursor: pointer;
+      }
+      #header_list > ul {
+          display: flex;
+          list-style: none;
+          gap: 36px;
+          margin-top: 26px;
+          margin-left: -48px;
+      }
+      #header_list a {
+          text-decoration: none;
+          color: #000;
+      }
+      #header_list a:hover {
+          color: #737373;
+      }
+      #search_button_field {
+          margin: 16px 0;
+      }
+      #search_button {
+          display: flex;
+          align-items: end;
+          padding: 6px 164px 6px 5px;
+          font-size: 14px;
+          gap: 5px;
+          background: #fff;
+          margin-right: 10px;
+          border: 1px solid #c7c7c7;
+          border-radius: 6px;
+          color: #737373;
+          cursor: pointer;
+      }
+      #search_button:hover {
+          background: #fff;
+      }
+      #search_icon {
+          width: 18px;
+          transform: rotate(-12deg);
+      }
+      #vertical_line {
+          border-right: 1px solid #c7c7c7;
+          height: 20px;
+          margin-left: 2px;
+          margin-right: 12px;
+      }
+      #dashboard_button_field {
+          margin-right: 30px;
+      }
+      #dashboard_button {
+          display: flex;
+          align-items: end;
+          padding: 6px 13px;
+          color: #000;
+          background: #fff;
+          border: 1px solid #c7c7c7;
+          border-radius: 6px;
+          font-size: 14px;
+          cursor: pointer;
+      }
+      #dash_field {
+          position: absolute;
+          width: 17px;
+          height: 17px;
+          top: 28px;
+          right: 155px;
+          display: flex;
+          justify-content: center;
+          border: 1px solid #c7c7c7;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      #dash {
+          margin-top: 3px;
+          height: 10px;
+          border-right: 1px solid #c7c7c7;
+          transform: rotate(20deg);
+      }
+      #text_div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 10px;
+      }
+      #copilot_powered {
+          display: flex;
+          justify-content: center;
+          transform: scaleY(0.95);
+          align-items: center;
+          font-family: "Mona Sans", "Mona Sans Header Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-size: 2.2em;
+          letter-spacing: -5px;
+          margin-top: 60px;
+          text-align: center;
+          height: 100px;
+      }
+      #presentation {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 10px 10%;
+          max-width: 1050px;
+          color: rgb(89, 99, 110);
+          line-height: 24px;
+          font-size: 17px;
+          box-sizing: border-box;
+          padding-top: 0;
+          text-align: center;
+      }
+      #start_free_button {
+          background: linear-gradient(
+                  to bottom,
+                  #3b3f42,
+                  #303438,
+                  #262a2d,
+                  #1b1f23
+          );
+          border: none;
+          color: white;
+          border-radius: 6px;
+          min-height: 48px;
+          min-width: 205px;
+          margin: -4px;
+          font-weight: 600;
+          font-size: 15px;
+          cursor: pointer;
+      }
+      #start_free_button:hover {
+          background: linear-gradient(
+                  to bottom,
+                  #575a5d,
+                  #43474b,
+                  #303437,
+                  #1b1f23
+          );
+      }
+      main {
+          display: flex;
+          justify-content: center;
+          margin-top: 105px;
+          gap: 29px;
+      }
+      .class_container {
+          display: flex;
+          justify-content: start;
+          flex-direction: column;
+          align-items: center;
+          width: 390px;
+          height: 900px;
+          border-radius: 10px;
+          box-shadow: 0 0 0 1px rgb(209, 217, 224), 0 56px 112px 0 rgba(37, 41, 46, 0.32);
+      }
+      .class_header {
+          text-align: center;
+      }
+      .class_header h2 {
+          font-size: 26px;
+          margin-top: 20px;
+          margin-bottom: 0;
+      }
+
+      .class_header p {
+          margin-top: 5px;
+          color: rgb(89, 99, 110);
+          font-size: 14px;
+          line-height: 16px;
+      }
+      .money_buttons {
+          margin: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .bucks_sup {
+          font-size: 24px;
+          color: rgb(89, 99, 110);
+      }
+      .money {
+          font-size: 48px;
+          margin-top: -9px;
+          margin-left: 4px;
+      }
+      .usd {
+          font-size: 24px;
+          margin-top: 15px;
+          margin-left: 3px;
+          font-weight: 600;
+      }
+      .per_user {
+          font-size: 16px;
+          color: rgb(89, 99, 110);
+          margin-top: 14px;
+          margin-left: 7px;
+      }
+      .bucks {
+          display: flex;
+          font-size: 24px;
+          height: 50px;
+      }
+      .class_button {
+          background: #fff;
+          border: 1px solid #c7c7c7;
+          width: 360px;
+          height: 48px;
+          border-radius: 6px;
+          margin: 14px;
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 2px;
+          cursor: pointer;
+      }
+      #free_button:hover {
+          border: 2px solid #000;
+      }
+      .class_container ul {
+          list-style: none;
+          color: rgb(89, 99, 110);
+          font-weight: 600;
+          font-size: 15px;
+      }
+      .class_container li {
+          padding-bottom: 16px;
+          position: relative;
+          line-height: 16px;
+          cursor: pointer;
+      }
+      .arrow {
+          width: 24px;
+          height: 24px;
+          transform: rotate(270deg);
+          position: absolute;
+          left: -28px;
+          top: -1px;
+      }
+      .list_ul {
+          width: 320px;
+          padding-top: 6px;
+          margin-left: -28px;
+      }
+      .sub_li {
+          font-size: 12px;
+          color: rgb(89, 99, 110);
+          font-weight: 400;
+      }
+      .features {
+          color: rgb(9, 105, 218);
+          font-weight: 600;
+          margin-left: -16px;
+      }
+      .bottom_ul {
+          margin-top: -18px;
+          margin-left: -28px;
+      }
+      #team_button {
+          background: linear-gradient(
+                  to bottom,
+                  #3b3f42,
+                  #303438,
+                  #262a2d,
+                  #1b1f23
+          );
+          border: none;
+          color: white;
+      }
+      #team_button:hover {
+          background: linear-gradient(
+                  to bottom,
+                  #575a5d,
+                  #43474b,
+                  #303437,
+                  #1b1f23
+          );
+      }
+      #starting_at_button {
+          background: #fff;
+          border: 1px solid #c7c7c7;
+          color: rgb(89, 99, 110);
+          border-radius: 12px;
+          width: 102px;
+          height: 30px;
+          font-size: 14px;
+          margin-bottom: 0;
+      }
+      .b_21 {
+          margin-top: -25px;
+      }
+      .b_21 .money {
+          letter-spacing: -6px;
+      }
+      #enterprise_button_field {
+          margin-top: -15px;
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+      }
+      .enterprise_button {
+          margin: 0;
+          width: 170px;
+      }
+      #enterprise_button1 {
+          background: linear-gradient(
+                  to bottom,
+                  #3b3f42,
+                  #303438,
+                  #262a2d,
+                  #1b1f23
+          );
+          border: none;
+          color: white;
+      }
+      #enterprise_button1:hover {
+          background: linear-gradient(
+                  to bottom,
+                  #575a5d,
+                  #43474b,
+                  #303437,
+                  #1b1f23
+          );
+      }
+      #enterprise_button2:hover {
+          border: 2px solid #000;
+      }
+      .included {
+          display: flex;
+          position: relative;
+          font-size: 14px;
+          margin-left: 18px;
+          margin-top: 26px;
+      }
+      .arrow2 {
+          position: absolute;
+          width: 14px;
+          transform: rotate(180deg);
+          left: -30px;
+          top: 4px;
+      }
+      #recommended_block {
+          position: relative;
+          background:  #0e71e6;
+          width: 406px;
+          height: 940px;
+          left: -8px;
+          top: -31px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      #enterprise_block {
+          position: relative;
+          background: #fff;
+          top: 6px;
+      }
+      #recommended {
+          padding-top: 6px;
+          margin: 0;
+          color: #fff;
+          font-weight: 600;
+          font-size: 14px;
+      }
+      #enterprise_list {
+          margin-top: 14px;
+      }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="header_left">
+        <div id="github_logo">
+          <img id="github_logo_img" src="github-icon.png" alt="GitHub Logo">
+        </div>
+        <div id="header_list">
+          <ul>
+            <li><a href="">Platform</a></li>
+            <li><a href="">Solutions</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Open Source</a></li>
+            <li><a href="">Enterprise</a></li>
+            <li><a href="">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="header_right">
+        <div id="search_button_field">
+          <button id="search_button" type="button">
+            <img id="search_icon" src="loupe.png" alt="Search Icon">
+            Search or jump to...
+          </button>
+          <div id="dash_field">
+            <div id="dash"></div>
+          </div>
+        </div>
+        <div id="vertical_line"></div>
+        <div id="dashboard_button_field">
+          <button id="dashboard_button" type="button">Dashboard</button>
+        </div>
+      </div>
+    </header>
+    <div id="text_div">
+      <div id="copilot_powered">
+        <h1>Try the Copilot-powered platform</h1>
+      </div>
+      <div id="presentation">
+        <p>We get it, there's a lot you can do with GitHub. That’s why we've packed all of it into a single risk-free trial that includes GitHub Enterprise, Copilot, and Advanced Security.</p>
+      </div>
+      <div id="start_free_button_field">
+        <button id="start_free_button" type="button">Start free for 30 days</button>
+      </div>
+    </div>
+    <main>
+      <div class="class_container">
+        <div class="class_header">
+          <h2>Free</h2>
+          <p>The basics for individuals <br>
+            and organizations</p>
+        </div>
+        <div class="money_buttons">
+          <div class="bucks">
+            <sup class="bucks_sup">$</sup>
+            <p class="money">0</p>
+            <p class="usd">USD</p>
+            <p class="per_user">per user/month</p>
+          </div>
+          <div id="free_button_field">
+            <button class="class_button" id="free_button" type="button">
+              Create a free organization
+            </button>
+          </div>
+          <div id="free_list">
+            <ul class="list_ul">
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Unlimited public/private repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Dependabot security and version updates</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>2,000 CI/CD minutes/month</span><br><span class="sub_li">Free for public repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>500MB of Packages storage</span><br><span class="sub_li">Free for public repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Issues &amp; Projects</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Community support</span></li>
+            </ul>
+            <h4 class="features">FEATURED ADD-ONS</h4>
+            <ul class="list_ul bottom_ul">
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>GitHub Copilot Access</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>GitHub Codespaces Access</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="class_container">
+        <div class="class_header">
+          <h2>Team</h2>
+          <p>Advanced collaboration for<br>
+            individuals and organizations</p>
+        </div>
+        <div class="money_buttons">
+          <div class="bucks">
+            <sup class="bucks_sup">$</sup>
+            <p class="money">4</p>
+            <p class="usd">USD</p>
+            <p class="per_user">per user/month</p>
+          </div>
+          <div id="team_button_field">
+            <button class="class_button" id="team_button" type="button">
+              Continue with Team
+            </button>
+          </div>
+          <div>
+            <p class="included"><img class="arrow2" src="arrow2.png" alt="Arrow">Everything included in Free, plus...</p>
+            <ul class="list_ul">
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Access to GitHub Codespaces</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Repository rules</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Multiple reviewers in pull requests</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Draft pull requests</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Code owners</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Required reviewers</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Pages and Wikis</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Environment deployment branches and secrets</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>3,000 CI/CD minutes/month</span><br><span class="sub_li">Free for public repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>2GB of Packages storage</span><br><span class="sub_li">Free for public repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Web-based support</span></li>
+            </ul>
+            <h4 class="features">FEATURED ADD-ONS</h4>
+            <ul class="list_ul bottom_ul">
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>GitHub Secret Protection</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>GitHub Code Security</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="recommended_block">
+        <p id="recommended">RECOMMENDED</p>
+        <div class="class_container" id="enterprise_block">
+          <div class="class_header">
+            <h2>Enterprise</h2>
+            <p style="margin-bottom: 8px;">Security, compliance,<br>
+              and flexible deployment</p>
+            <button id="starting_at_button" type="button">
+              Starting at
+            </button>
+          </div>
+          <div class="money_buttons">
+            <div class="bucks b_21">
+              <sup class="bucks_sup">$</sup>
+              <p class="money">21</p>
+              <p class="usd">USD</p>
+              <p class="per_user">per user/month</p>
+            </div>
+          </div>
+          <div id="enterprise_button_field">
+            <button class="class_button enterprise_button" id="enterprise_button1" type="button">
+              Start a free trial
+            </button>
+            <button class="class_button enterprise_button" id="enterprise_button2" type="button">
+              Contact Sales
+            </button>
+          </div>
+          <div id="enterprise_list">
+            <p class="included"><img class="arrow2" src="arrow2.png" alt="Arrow">Everything included in Team, plus...</p>
+            <ul class="list_ul">
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Data residency</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Enterprise Managed Users</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>User provisioning through SCIM</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Enterprise Account to centrally manage multiple organizations</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Environment protection rules</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Repository rules</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Audit Log API</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>SOC1, SOC2, type 2 reports annually</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>FedRAMP Tailored Authority to Operate (ATO)</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>SAML single sign-on</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>Advanced auditing</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>GitHub Connect</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>50,000 CI/CD minutes/month</span><br><span class="sub_li">Free for public repositories</span></li>
+              <li><img class="arrow" src="arrow.png" alt="arrow"><span>50GB of Packages storage</span><br><span class="sub_li">Free for public repositories</span></li>
+            </ul>
+            <h4 class="features">EXCLUSIVE ADD-ON</h4>
+            <ul class="list_ul bottom_ul">
+              <li style="margin-top: -5px;"><img class="arrow" src="arrow.png" alt="arrow"><span>Premium support</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

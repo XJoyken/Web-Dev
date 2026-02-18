@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook — log in or register</title>
+  <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yx/r/e9sqr8WnkCf.ico">
+  <style>
+    body {
+        background: #fff;
+        color: #1c1e21;
+        line-height: 1.34;
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 12px;
+    }
+    #Container {
+        margin: 0 auto;
+        position: relative;
+    }
+    #content {
+        min-height: 640px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        display: block;
+    }
+    #logo_text_reg_field {
+        padding-bottom: 112px;
+        padding-top: 72px;
+        background: #f2f4f7;
+        min-width: 980px;
+        display: block;
+    }
+    #logo_text_reg_center {
+        margin: 0 auto;
+        padding: 20px 0;
+        /*position: relative;*/
+        /*border: 1px solid black;*/
+        width: 980px;
+    }
+    #logo_text {
+        /*border: 1px solid black;*/
+        box-sizing: border-box;
+        margin-right: 0;
+        padding-right: 32px;
+        width: 579px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #logo_block {
+        padding: 112px 0 16px;
+    }
+    #logo {
+        height: 106px;
+        margin: -28px;
+    }
+    h2 {
+        margin: 0;
+    }
+    #text_slogan {
+        font-family: SFProDisplay-Regular,Helvetica,Arial,sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+        width: 500px;
+        padding: 0;
+        color: #1c1e21;
+        display: inline-block;
+    }
+    #reg_block {
+        display: inline-block;
+        /*border: 1px solid black;*/
+        vertical-align: top;
+    }
+    #reg {
+        height: 456px;
+        width: 396px;
+
+    }
+    #reg_window {
+        padding-bottom: 24px;
+        padding-top: 10px;
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px #0000001a,0 8px 16px #0000001a;
+        box-sizing: border-box;
+        margin: 40px 0 0;
+        width: 396px;
+        text-align: center;
+    }
+    #email_phone_field {
+        font-size: 17px;
+        width: 364px;
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        padding:6px 0;
+    }
+    #email_phone {
+        border: 1px solid #dddfe2;
+        color: #1d2129;
+        height: 22px;
+        line-height: 16px;
+        vertical-align: middle;
+        width: 330px;
+        font-size: 17px;
+        padding: 14px 16px;
+        border-radius: 6px;
+        margin:0;
+    }
+    #password_field {
+        font-size: 17px;
+        width: 364px;
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        padding:6px 0;
+    }
+    #password {
+        border: 1px solid #dddfe2;
+        color: #1d2129;
+        height: 22px;
+        line-height: 16px;
+        vertical-align: middle;
+        width: 330px;
+        font-size: 17px;
+        padding: 14px 16px;
+        border-radius: 6px;
+        margin:0;
+    }
+    #login_button_field {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 6px;
+        text-align: center;
+    }
+    #login_button {
+        background-color: #0866ff;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        line-height: 48px;
+        padding: 0 16px;
+        width: 332px;
+        box-sizing: content-box;
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        cursor: pointer;
+    }
+    #login_button:hover {
+        background-color: #1877f2;
+    }
+    #forgot_password {
+        /*border: 1px solid #dddddd;*/
+        margin: 16px 140px 0;
+        text-align: center;
+    }
+    #ref_forgot {
+        text-decoration: none;
+        color: #0866ff;
+        font-size: 14px;
+    }
+    #forgot_password:hover {
+        text-decoration: underline;
+        color:#0866ff;
+    }
+    #underline {
+        margin: 20px 16px;
+        border-bottom: 1px solid #DADDE1;
+    }
+    #create_account_button_field {
+        padding-top: 6px;
+    }
+    #create_account_button {
+        border: none;
+        border-radius: 6px;
+        background-color: #42b72a;
+        color: #fff;
+        cursor: pointer;
+        line-height: 48px;
+        padding: 0 16px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    #create_account_button:hover {
+        background-color: #36a420;
+    }
+    #create_a_page {
+        color: #1c1e21;
+        font-size: 14px;
+        margin-top: 28px;
+        text-align: center;
+        font-weight: 400;
+        padding-top: 0;
+    }
+    #ref_create_a_page {
+        font-weight: bold;
+        color: #1c1e21;
+        text-decoration: none;
+    }
+    #ref_create_a_page:hover {
+        text-decoration: underline;
+    }
+    #footer_content_block {
+        padding-top: 20px;
+    }
+    #footer {
+        color: #737373;
+        margin: 0 auto;
+        width: 980px;
+    }
+    #languages {
+        padding-top: 8px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul > li {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    #footer a {
+        color: #8a8d91;
+        text-decoration: none;
+    }
+    #footer a:hover {
+        text-decoration: underline;
+    }
+    #footer a:active {
+        color: #8a8d91;
+    }
+    #plus_button {
+        height: 18px;
+        background-color: #f5f6f7;
+        border: 1px solid #ccd0d5;
+        border-radius: 2px;
+        box-sizing: content-box;
+        padding: 0 8px;
+        position: relative;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    #languages {
+        margin-left: -10px;
+    }
+    #footer_underline {
+        border-bottom: 1px solid #dddfe2;
+        height: 8px;
+        margin-bottom: 8px;
+    }
+    #footer_information {
+        margin-left: -20px;
+    }
+    #footer_information li {
+        padding-right: 0;
+        padding-left: 20px;
+        vertical-align: top;
+        display: inline-block;
+    }
+    #meta_podpis {
+        font-size: 11px;
+        margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="Container">
+    <div id="content">
+      <div id="logo_text_reg_field">
+        <div id="logo_text_reg_center">
+          <div id="logo_text">
+            <div id="logo_block">
+              <img id="logo" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook">
+            </div>
+            <h2 id="text_slogan">
+              Connect with friends and the world around you on Facebook.
+            </h2>
+          </div>
+          <div id="reg_block">
+            <div id="reg">
+              <div id="reg_window">
+                <div>
+                  <div id="email_phone_field">
+                    <input id="email_phone" type="text" placeholder="Email or phone number" name="email">
+                  </div>
+                  <div id="password_field">
+                    <input id="password" type="password" placeholder="Password" name="password">
+                  </div>
+                </div>
+                <div id="login_button_field">
+                  <button id="login_button" type="button" name="Log in">Log in</button>
+                </div>
+                <div id="forgot_password">
+                  <a id="ref_forgot" href="">Forgot password?</a>
+                </div>
+                <div id="underline"></div>
+                <div id="create_account_button_field">
+                  <button id="create_account_button">Create new account</button>
+                </div>
+              </div>
+              <div id="create_a_page">
+                <a id="ref_create_a_page" href="">Create a Page</a><p style="display: inline"> for a celebrity, brand or business.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="footer_content_block">
+        <div id="footer">
+          <ul id="languages">
+            <li>English (US)</li>
+            <li><a href="">Русский</a></li>
+            <li><a href="">Қазақша</a></li>
+            <li><a href="">Türkçe</a></li>
+            <li><a href="">Bahasa Indonesia</a></li>
+            <li><a href="">中文(简体)</a></li>
+            <li><a href="">Deutsch</a></li>
+            <li><a href="">한국어</a></li>
+            <li><a href="">Shqip</a></li>
+            <li><a href="">Español</a></li>
+            <li><a href="">Português (Brasil)</a></li>
+            <li>
+              <a id="plus_button" role="button" href="" title="Show more languages">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div id="footer_underline"></div>
+          <div>
+            <ul id="footer_information">
+              <li><a href="">Sign Up</a></li>
+              <li><a href="">Log In</a></li>
+              <li><a href="">Messenger</a></li>
+              <li><a href="">Facebook Lite</a></li>
+              <li><a href="">Video</a></li>
+              <li><a href="">Meta Play</a></li>
+              <li><a href="">Meta Store</a></li>
+              <li><a href="">Meta Quest</a></li>
+              <li><a href="">Ray-Ban Meta</a></li>
+              <li><a href="">Meta AI</a></li>
+              <li><a href="">Meta AI more content</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Threads</a></li>
+              <li><a href="">Voting Information Center</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Privacy Center</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Create ad</a></li>
+              <li><a href="">Create Page</a></li>
+              <li><a href="">Developers</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Cookies</a></li>
+              <li><a href="">Ad choices</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Help</a></li>
+              <li><a href="">Contact Uploading & Non-Users</a></li>
+            </ul>
+          </div>
+          <div id="meta_podpis">
+            <div>
+              <p> Meta © 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

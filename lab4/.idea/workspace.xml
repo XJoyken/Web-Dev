@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5374494-ddc0-4430-9b45-4088a7601ed1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.vscode/mcp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/.vscode/tasks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.config.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.routes.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.spec.json" afterDir="false" />
-    </list>
+    <list default="true" id="b5374494-ddc0-4430-9b45-4088a7601ed1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,11 +15,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/my-app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="39l0NdB5gxzNUzdApGi8UbJ78vr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,6 +32,7 @@
     "Node.js.anatomy-of-component.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
@@ -101,6 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771255311058</updated>
       <workItem from="1771255312436" duration="18398000" />
+      <workItem from="1771435153605" duration="644000" />
     </task>
     <servers />
   </component>

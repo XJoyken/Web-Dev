@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b5374494-ddc0-4430-9b45-4088a7601ed1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.vscode/mcp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.config.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.routes.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/app/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/tsconfig.spec.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/my-app" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="39l0NdB5gxzNUzdApGi8UbJ78vr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.localhost:4200.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.anatomy-of-component.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "D:/Code/2 course/Web/lab4",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
+    "ts.external.directory.path": "D:\\Code\\2 course\\Web\\lab4\\my-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\2 course\Web\lab4\my-app\public" />
+      <recent name="D:\Code\2 course\Web\lab4\my-app\src\app\optimizing-images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost:4200" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:4200/">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:4200" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5374494-ddc0-4430-9b45-4088a7601ed1" name="Changes" comment="" />
+      <created>1771255311058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771255311058</updated>
+      <workItem from="1771255312436" duration="18398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

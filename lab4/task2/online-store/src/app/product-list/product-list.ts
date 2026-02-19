@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {Product} from '../product.model';
+import {ProductCardComponent} from '../product-card/product-card';
 
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, ProductCardComponent],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
@@ -113,17 +114,17 @@ export class ProductListComponent {
       link: 'https://kaspi.kz/shop/p/merlin-sv-11-belyi-137842834/?c=750000000'
     },
   ];
-  getWhatsAppLink(product: Product): string {
-    const message = `Check out this product: ${product.link}`;
-    return `https://wa.me/?text=${encodeURIComponent(message)}`;
-  }
-  getTelegramLink(product: Product): string {
-    const url = encodeURIComponent(product.link);
-    const text = encodeURIComponent(product.name);
-    return `https://t.me/share/url?url=${url}&text=${text}`;
-  }
-  changeMainImage(product: Product, newImageUrl: string) {
-    product.image = newImageUrl;
-    console.log('Клик сработал! Заменяем на:', newImageUrl);
-  }
+  // getWhatsAppLink(product: Product): string {
+  //   const message = `Check out this product: ${product.link}`;
+  //   return `https://wa.me/?text=${encodeURIComponent(message)}`;
+  // }
+  // getTelegramLink(product: Product): string {
+  //   const url = encodeURIComponent(product.link);
+  //   const text = encodeURIComponent(product.name);
+  //   return `https://t.me/share/url?url=${url}&text=${text}`;
+  // }
+  // changeMainImage(product: Product, newImageUrl: string) {
+  //   product.image = newImageUrl;
+  //   console.log('Клик сработал! Заменяем на:', newImageUrl);
+  // }
 }

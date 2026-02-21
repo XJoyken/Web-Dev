@@ -1,0 +1,34 @@
+<div class="product-card">
+  <div class="image-container">
+    <img [src]='product.image' [alt]="product.name" class="product-image" />
+
+    <div class="gallery">
+      @for (img of product.images; track img) {
+        <img
+          [src]="img"
+          (click)="changeMainImage(img)"
+          [class.active-thumbnail]="product.image === img"
+          class="thumbnail"
+          alt="Gallery"
+        />
+      }
+    </div>
+  </div>
+  <div class="product-info">
+    <h2>{{product.name}}</h2>
+    <p class="description">{{product.description}}</p>
+    <div class="rating">
+      <div class="stars-wrapper">
+        <div class="stars-empty">★★★★★</div>
+        <div class="stars-filled" [style.width.%]="(product.rating / 5) * 100-2">★★★★★</div>
+      </div>
+      <span class="rating-badge">{{ product.rating }}</span>
+    </div>
+    <p class="price">{{ product.price }}<span class="currency">₸</span> </p>
+    <div class="references">
+      <a [href]="product.link" target="_blank" class="kaspi-button">Buy on Kaspi.kz</a>
+      <a [href]="getWhatsAppLink()" target="_blank" class="whatsapp-button"><img class="wa-logo" ngSrc="/wa-logo.png" alt="Whatsapp logo" width="37" height="37"></a>
+      <a [href]="getTelegramLink()" target="_blank" class="telegram-button"><img class="tg-logo" ngSrc="/tg-logo.svg" alt="Telegram logo" width="37" height="37"></a>
+    </div>
+  </div>
+</div>

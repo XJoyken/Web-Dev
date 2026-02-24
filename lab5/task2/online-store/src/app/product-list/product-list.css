@@ -183,3 +183,35 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.category-field {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+  border-top: none;
+  border-right: none;
+  /*border-left: none;*/
+  box-sizing: border-box;
+}
+
+.category-button {
+  flex: 1;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid #c9c9c9;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.category-button:hover {
+  background: #e04131;
+  transition: background-color 0.4s ease;
+  color: white;
+}
+
+.category-button.active {
+  background: #e04131;
+  color: white;
+}

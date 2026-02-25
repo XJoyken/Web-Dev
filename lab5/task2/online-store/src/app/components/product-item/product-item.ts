@@ -1,17 +1,19 @@
 import { Component, input, output } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Product } from '../product.model';
+import { Product } from '../../models/product.model';
 
 @Component({
-  selector: 'app-product-card',
+  selector: 'app-product-item',
   standalone: true,
   imports: [CommonModule, NgOptimizedImage],
-  templateUrl: './product-card.html',
-  styleUrl: './product-card.css'
+  templateUrl: './product-item.html',
+  styleUrl: './product-item.css'
 })
-export class ProductCardComponent {
+export class ProductItemComponent {
   product = input.required<Product>();
   productLike = output<number>();
+  productDelete = output<number>();
+
   getWhatsAppLink(): string {
     const message = `Check out this product: ${this.product().link}`;
     return `https://wa.me/?text=${encodeURIComponent(message)}`;
@@ -28,6 +30,10 @@ export class ProductCardComponent {
   }
 
   likeClick() {
-    this.productLike.emit(this.product().id)
+    this.productLike.emit(this.product().id);
+  }
+
+  deleteClick() {
+    this.productDelete.emit(this.product().id);
   }
 }

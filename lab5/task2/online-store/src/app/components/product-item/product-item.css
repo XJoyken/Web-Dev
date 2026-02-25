@@ -1,7 +1,11 @@
-.product-list {
-  display: flex;
-  flex-direction: column;
+:host {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
 
+:host(:first-child) .product-card {
+  border-top: none;
 }
 
 .product-card {
@@ -9,14 +13,9 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 20px;
-  width: 100%;
   height: 400px;
-  border: 1px solid #c9c9c9;
+  border-top: 1px solid #c9c9c9;
   border-bottom: none;
-}
-
-.product-card:first-child {
-  border-top: none;
 }
 
 .product-info h2,
@@ -39,8 +38,8 @@
   height: 300px;
   object-fit: contain;
   padding: 0 10px;
-  /*align-self: center;*/
 }
+
 .product-info {
   flex: 1;
   display: flex;
@@ -50,8 +49,7 @@
   padding: 20px;
   margin-left: -5px;
 }
-.description {
-}
+
 a {
   text-decoration: none;
 }
@@ -84,7 +82,7 @@ a {
   cursor: default;
 }
 
-.rating-number {
+.rating-badge {
   font-weight: bold;
   color: #333;
   font-size: 16px;
@@ -128,7 +126,7 @@ a {
   background: #e04131;
 }
 
-.whatsapp-button {
+.whatsapp-button, .telegram-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,19 +134,7 @@ a {
   height: 40px;
 }
 
-.whatsapp-button:hover {
-  background: #ededed;
-}
-
-.telegram-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-}
-
-.telegram-button:hover {
+.whatsapp-button:hover, .telegram-button:hover {
   background: #ededed;
 }
 
@@ -158,7 +144,6 @@ a {
   justify-content: center;
   padding: 10px;
   width: 100%;
-
 }
 
 .thumbnail {
@@ -179,39 +164,54 @@ a {
   border-width: 2px;
 }
 
-.product-list {
+.action-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.category-field {
+.delete-button {
   display: flex;
-  height: 40px;
-  width: 100%;
-  border: 1px solid #c9c9c9;
-  border-top: none;
-  border-right: none;
-  /*border-left: none;*/
-  box-sizing: border-box;
-}
-
-.category-button {
-  flex: 1;
-  border-radius: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: red;
   border: none;
-  cursor: pointer;
-  border-right: 1px solid #c9c9c9;
+  color: white;
   font-size: 18px;
-  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.category-button:hover {
+.delete-button:hover {
   background: #e04131;
-  transition: background-color 0.4s ease;
-  color: white;
+  color: #c9c9c9;
 }
 
-.category-button.active {
-  background: #e04131;
-  color: white;
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  color: red;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.like-button:active {
+  color: #d65157;
+  transform: scale(0.97);
+}
+
+.likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likes span {
+  padding-top: 5px;
 }

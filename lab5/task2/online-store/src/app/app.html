@@ -7,7 +7,22 @@
     <p>Your ad<br>could be here</p>
   </aside>
   <section class="main-content">
-    <app-product-list></app-product-list>
+<!--    <button (click)="sortProducts()" type="button">-->
+<!--      Sort-->
+<!--    </button>-->
+    <div class="category-field">
+      @for (category of categories; track category.id) {
+        <button class="category-button"
+                type="button"
+                (click)="setProducts(category.id)"
+                [class.active]="category.id === selectedId">
+          {{category.name}}
+        </button>
+      }
+    </div>
+
+    <app-product-list [products]="selectedProducts"></app-product-list>
+
   </section>
   <aside class="ad-space">
     <p>Your ad<br>could be here</p>
@@ -16,5 +31,3 @@
 <footer class="head-foot">
   Made by<br><p>XJoyken</p>
 </footer>
-
-

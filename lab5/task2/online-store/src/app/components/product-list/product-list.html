@@ -1,0 +1,14 @@
+<div class="product-list">
+  @if (printedProducts.length === 0) {
+    <span class="no-products">No products in the category</span>
+  }
+  @else {
+    @for (product of printedProducts; track product.id) {
+      <app-product-item
+        [product]="product"
+        (productLike)="handleLikes($event)"
+        (productDelete)="handleDelete($event)">
+      </app-product-item>
+    }
+  }
+</div>

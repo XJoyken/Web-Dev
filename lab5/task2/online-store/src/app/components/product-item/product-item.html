@@ -20,24 +20,26 @@
     <div class="rating">
       <div class="stars-wrapper">
         <div class="stars-empty">★★★★★</div>
-        <div class="stars-filled" [style.width.%]="(product().rating / 5) * 100-2">★★★★★</div>
+        <div class="stars-filled" [style.width.%]="(product().rating / 5) * 100 - 2">★★★★★</div>
       </div>
       <span class="rating-badge">{{ product().rating }}</span>
     </div>
-    <p class="price">{{ product().price }}<span class="currency">₸</span> </p>
+    <p class="price">{{ product().price | number:'1.0-2'}}<span class="currency">₸</span> </p>
     <div class="action-buttons">
-      <button class="like-button" (click)="likeClick()">
-        ♥
-      </button>
-      {{product().likes}}
-      <button class="delete-button">
+      <div class="likes">
+        <button class="like-button" (click)="likeClick()">
+          ♥
+        </button>
+        <span>{{product().likes}}</span>
+      </div>
+      <button class="delete-button" (click)="deleteClick()">
         Delete
       </button>
     </div>
     <div class="references">
       <a [href]="product().link" target="_blank" class="kaspi-button">Buy on Kaspi.kz</a>
-      <a [href]="getWhatsAppLink()" target="_blank" class="whatsapp-button"><img class="wa-logo" ngSrc="/wa-logo.png" alt="Whatsapp logo" width="37" height="37"></a>
-      <a [href]="getTelegramLink()" target="_blank" class="telegram-button"><img class="tg-logo" ngSrc="/tg-logo.svg" alt="Telegram logo" width="37" height="37"></a>
+      <a [href]="getWhatsAppLink()" target="_blank" class="whatsapp-button"><img class="wa-logo" ngSrc="/wa-logo.png" alt="WhatsApp" width="32" height="32"></a>
+      <a [href]="getTelegramLink()" target="_blank" class="telegram-button"><img class="tg-logo" ngSrc="/tg-logo.svg" alt="Telegram" width="32" height="32"></a>
     </div>
   </div>
 </div>

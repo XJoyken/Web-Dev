@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../product.model';
-import { Category } from '../category.model';
+import { Product } from '../models/product.model';
+import { Category } from '../models/category.model';
 
 @Injectable({
   providedIn: 'root',
@@ -265,8 +265,5 @@ export class ProductService {
   }
   getProductsByCategory(c: number): Product[] {
     return this.products.filter(p => p.categoryId.includes(c));
-  }
-  addProduct(product: Product) {
-    this.products.push(product);
   }
 }

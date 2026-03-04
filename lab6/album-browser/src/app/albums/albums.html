@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>
+    All albums
+  </h2>
+  <div>
+    @if (albums$ | async; as albumsList) {
+      <div>
+        @for (album of albumsList; track album.id) {
+          <div class="album-item">
+            <div
+              [routerLink]="['/albums', album.id]"
+              class="album-card">
+              <div class="card-info">
+                <span class="album-id">#{{album.id}}</span>
+                <span class="album-title">> {{album.title}}</span>
+              </div>
+            </div>
+            <button class="delete-btn" (click)="deleteAlbum(album.id)">Delete</button>
+          </div>
+        } @empty {
+          <p>Empty</p>
+        }
+      </div>
+    } @else {
+      <div class="loader">
+        <p>Loading albums...</p>
+      </div>
+    }
+  </div>
+</div>

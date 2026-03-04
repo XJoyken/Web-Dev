@@ -1,0 +1,27 @@
+<div class="container">
+  <header class="photos-header">
+    <button [routerLink]="['/albums', albumId]" class="btn-back">
+      ← Back to Album #{{ albumId }}
+    </button>
+    <h2>Photos in this Album</h2>
+  </header>
+  @if (photos$ | async; as photos) {
+    <div class="photos-grid">
+      @for (photo of photos; track photo.id) {
+        <div class="photo-card">
+          <img [src]="photo.thumbnailUrl" [alt]="photo.title" loading="lazy">
+          <div class="photo-overlay">
+            <p class="photo-title">{{ photo.title }}</p>
+          </div>
+        </div>
+      } @empty {
+        <p>No photos found for this album.</p>
+      }
+    </div>
+  } @else {
+    <div class="loader">
+      <div class="spinner"></div>
+      <p>Loading gallery...</p>
+    </div>
+  }
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  @if (album$ | async; as album) {
+    <div class="detail-card">
+      <header>
+        <h2>Album Detail #{{ album.id }}</h2>
+        <span class="user-badge">User ID: {{ album.userId }}</span>
+      </header>
+
+      <div class="edit-section">
+        <label for="albumTitle">Edit Album Title:</label>
+        <input
+          id="albumTitle"
+          type="text"
+          [(ngModel)]="album.title"
+          class="input"
+        >
+      </div>
+
+      <div class="actions">
+        <button (click)="saveTitle(album)" class="save-btn">Save changes</button>
+
+        <button [routerLink]="['/albums', album.id, 'photos']" class="photos-btn">
+          View Photos
+        </button>
+
+        <button (click)="goBack()" class="back-btn">Back to list</button>
+      </div>
+    </div>
+  } @else {
+    <div class="fetching-loader">
+      <div class="dot-loader"></div>
+      <p>Fetching album details...</p>
+    </div>
+  }
+</div>
